@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Paytone+One&family=Readex+Pro:wght@300;400;700&display=swap');
+
+:root {
+    --rosa-claro: #FDCBCB;
+    --rosa: #E0A2A2;
+    --branco: #E6E6E6;
+    --marrom: #925C5C;
+    --marrom-escuro: #876060;
+
+    --josefin-sans: 'Josefin Sans', sans-serif;
+    --paytone-one: 'Paytone One', sans-serif;
+    --readex-pro: 'Readex Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--rosa-claro);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.cabecalho > img {
+    width: 380px;
+}
+
+.cabecalho > p {
+    font-family: var(--readex-pro);
+    font-size: 24px;
+    color: var(--marrom-escuro);
+    text-align: center;
+    padding-top: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: var(--josefin-sans);
+    color: var(--marrom-escuro);
+    background-color: var(--rosa);
+    width: 540px;
+    height: 500px;
+    gap: 38px;
+}
+
+label {
+    font-family: var(--josefin-sans);
+    font-size: 22px;
+    color: var(--marrom-escuro);
+    width: 420px;
+    background-color: var(--rosa);
+}
+
+input {
+    all: unset;
+    border-bottom: 2px solid var(--marrom);
+    width: 420px;
+    font-size: 22px;
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--marrom);
+    border-radius: 50px;
+    border-style: none;
+    font-family: var(--josefin-sans);
+    font-size: 24px;
+    color: var(--branco);
+    width: 240px;
+    height: 42px;
+    cursor: pointer;
+}
+
+footer > img {
+    width: 320px;
+    position: absolute;
+    right: 160px;
+    top: 600px;
+}
