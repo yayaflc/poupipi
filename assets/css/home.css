@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Paytone+One&family=Readex+Pro:wght@300;400;700&display=swap');
+
+:root {
+    --rosa-claro: #FDCBCB;
+    --rosa: #E0A2A2;
+    --branco: #E6E6E6;
+    --marrom: #925C5C;
+    --marrom-escuro: #876060;
+    --vermelho: #A72727;
+    --verde: #3FA555;
+
+    --josefin-sans: 'Josefin Sans', sans-serif;
+    --paytone-one: 'Paytone One', sans-serif;
+    --readex-pro: 'Readex Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--rosa-claro);
+}
+
+.container {
+    font-family: var(--readex-pro);
+    color: var(--marrom-escuro);
+}
+
+.logo {
+    margin-bottom:40px;
+}
+
+.container-texto {
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.container-texto > h1 {
+    font-size: 48px;
+    padding-bottom: 20px;
+}
+
+#texto-meta {
+    font-size: 38px;
+}
+
+#texto-data {
+    font-size: 28px;
+}
+
+form > h1 {
+    color: var(--marrom-escuro);
+    font-size: 38px;
+}
+
+form > p {
+    color: var(--marrom-escuro);
+    font-size: 24px;
+}
+
+.container-valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: var(--josefin-sans);
+    color: var(--marrom-escuro);
+    background-color: var(--rosa);
+    width: 700px;
+    height: 440px;
+    gap: 38px;
+}
+
+input {
+    background-color: var(--branco);
+    border-style: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 42px;
+}
+
+#button-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--marrom);
+    border-radius: 50px;
+    border-style: none;
+    font-family: var(--josefin-sans);
+    font-size: 24px;
+    color: var(--branco);
+    width: 230px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.buttons-modify {
+    display: flex;
+    flex-direction: collunm;
+    align-items: center;
+    gap: 40px;
+}
+
+#button-somar {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 50px;
+    font-weight: 800;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-subtrair {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 50px;
+    font-weight: 800;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
