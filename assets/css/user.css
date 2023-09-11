@@ -61,6 +61,13 @@ form > p {
     font-size: 24px;
 }
 
+.imagem-porquinho  {
+    position: absolute;
+    width: 300px;
+    right: 430px;
+    top: 170px;
+}
+
 .container-valor {
     display: flex;
     flex-direction: column;
@@ -88,8 +95,12 @@ input {
     background-color: var(--branco);
     border-style: none;
     border-radius: 50px;
-    width: 400px;
+    width: 80%;
     height: 42px;
+    font-family: var(--josefin-sans);
+    font-size: 22px;
+    color: var(--marrom-escuro);
+    padding-left:20px;
 }
 
 #button-add {
@@ -105,6 +116,10 @@ input {
     width: 230px;
     height: 42px;
     cursor: pointer;
+}
+
+#button-add:hover {
+    background-color: var(--marrom-escuro);
 }
 
 .buttons-modify {
@@ -138,4 +153,89 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 840px) {
+    form {
+        width: 600px;
+    }
+
+    img {
+        width: 500px;
+    }
+
+    .container-texto > h1 {
+        font-size: 38px;
+    }
+
+    .container-texto > #texto-meta {
+        font-size: 30px;
+    }
+
+    .container-texto > #texto-data {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 690px) {
+   form {
+        width: 460px;
+
+    }
+
+    img {
+        width: 400px;
+    }
+
+    .container-texto > h1 {
+        font-size: 30px;
+    }
+
+    .container-texto > #texto-meta {
+        font-size: 26px;
+    }
+
+    .container-texto > #texto-data {
+        font-size: 22px;
+    }
+
+    form > h1 {
+        font-size: 28px;
+    }
+
+    form > p {
+        font-size: 20px;
+    }
+
+    input {
+        height: 32px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    img {
+        width: 300px;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    form > h1 {
+        font-size: 22px;
+    }
+
+    form > p {
+        font-size: 16px;
+    }
+
+    input {
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .container-texto {
+        margin: 30px;
+    }
 }
