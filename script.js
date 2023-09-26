@@ -104,9 +104,11 @@ function toggleTheme() {
 }
 
 function loadTheme () {
-    let currentThemeSetting = localStorage.getItem("theme");     
-
-    if(currentThemeSetting === "dark") {
+    let SystemThemeSetting = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    let currentThemeSetting = localStorage.getItem("theme");         
+    
+    if(currentThemeSetting === "dark" || (SystemThemeSetting === true && currentThemeSetting === null)) {
         newTheme = "dark";
         changeIcon = "dark_mode";
     } else {
