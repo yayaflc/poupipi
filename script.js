@@ -31,6 +31,8 @@ function carregarDados() {
 
     var textoRestante = document.getElementById("valor-restante");
     textoRestante.textContent = `falta R$ ${valorAtual} para bater a meta`;
+
+    document.getElementById("valor-adicionar").value = 0;
 }
 
 window.onload = carregarDados;
@@ -56,11 +58,62 @@ function salvarNumero() {
 
     var textoRestante = document.getElementById("valor-restante");
 
-    if (valorAtual >= 0) {
+    if (valorAtual > 0) {
         textoRestante.textContent = `falta R$ ${valorAtual} para bater a meta`;
     } else {
         textoRestante.textContent = `Você bateu a meta!`;
     }
 
-    document.getElementById("valor-adicionar").value = ""
+    document.getElementById("valor-adicionar").value = 0;
+}
+
+function stopDefEvent(e) {
+    e.preventDefault()
+    salvarNumero();
+}
+
+document.getElementById("add").addEventListener('submit', stopDefEvent, false);
+
+// dark and light mode
+
+var icon = document.querySelector("[data-theme-toggle]");
+loadTheme();
+
+function toggleTheme() {
+    let currentThemeSetting = document.querySelector("html").getAttribute("data-theme");
+    var icon = document.querySelector("[data-theme-toggle]");
+
+    if (currentThemeSetting === "dark") {
+        document.querySelector("html").setAttribute("data-theme", "light");
+        currentThemeSetting = "light";
+        icon.innerText = "light_mode";
+
+        const logo = document.querySelector(".logo");
+        logo.src = "assets/images/logo_dark.png";
+
+        localStorage.setItem("theme", "light");
+    } else {
+        document.querySelector("html").setAttribute("data-theme", "dark");
+        icon.innerText = "dark_mode";
+
+        const logo = document.querySelector(".logo");
+        logo.src = "assets/images/logo_light.png";
+
+        localStorage.setItem("theme", "dark");
+    }
+}
+
+function loadTheme () {
+    let currentThemeSetting = localStorage.getItem("theme");     
+
+    if(currentThemeSetting === "dark") {
+        newTheme = "dark";
+        changeIcon = "dark_mode";
+    } else {
+        newTheme = "light";
+        changeIcon = "light_mode";
+    }
+    
+    icon.innerText = changeIcon;
+    document.querySelector("html").setAttribute("data-theme", newTheme);
 }

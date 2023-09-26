@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "assets/css/user.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Poupipi - Home</title>
 </head>
     <body>
+        <header>
+            <button class="btn-theme material-symbols-outlined" type="button" data-theme-toggle aria-label="Change to light theme" onclick="toggleTheme()"> light_mode </button>
+        </header>
 
         <div class="container" id="container">
             <div class="container-texto">
-                <img src="assets/images/logo.png" alt="logo" class="logo">
+                <img src="assets/images/logo_dark.png" alt="logo" class="logo">
                 <h1 id="texto-nome-user">Bem-vindo, </h1>
                 <p id="texto-meta">A sua meta é R$</p>
                 <p id="texto-data">até dia</p>
             </div>
             
             <div class="container-valor">
-                <form>
+                <form id="add">
                     <h1>Deseja adicionar fundos?</h1>
                     <p id="valor-restante">falta R$ para bater a meta</p>
                     <input type="number" id="valor-adicionar">
                     <div class="buttons-modify">
-                        <label type="button" onclick="somarNumero();" id="button-somar">+</label>
-                        <label type="button" onclick="subtrairNumero();" id="button-subtrair">-</label>
+                        <span type="button" onclick="somarNumero();" id="button-somar" class="material-symbols-outlined">add</span>
+                        <span type="button" onclick="subtrairNumero();" id="button-subtrair" class="material-symbols-outlined">remove</span>
                     </div>
                     <label type="button" onclick="salvarNumero();" id="button-add">adicionar</label>
                 </form>

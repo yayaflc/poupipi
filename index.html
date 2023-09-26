@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Poupipi</title>
 </head>
-    <body>
+    <header>
         <div class="cabecalho">
-            <img src="assets/images/logo.png" alt="logo">
+            <img src="assets/images/logo_dark.png" alt="logo" class="logo">
             <p>Porque poupar aqui é muito mais fácil.</p>
         </div>
+        <button class="btn-theme material-symbols-outlined" type="button" data-theme-toggle aria-label="Change to light theme" onclick="toggleTheme()"> light_mode </button>
+    </header>
+
+    <body>
 
         <div class="container" id="container">
             <form>
                 <label for="name">Digite o seu nome</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" minlength="3" maxlength="100" required>
 
                 <label for="meta">Digite sua meta</label>
-                <input type="number" id="meta">
+                <input type="number" id="meta" minlength="2" maxlength="20" required>
 
                 <label for="meta">Digite a data que queira atingir a meta</label>
-                <input type="date" id="meta-data">
+                <input type="date" id="meta-data" required>
 
                 <label type="button" onclick="salvarDados()" id="button">começar</label>
             </form>

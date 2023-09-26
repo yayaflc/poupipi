@@ -1,17 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Paytone+One&family=Readex+Pro:wght@300;400;700&display=swap');
 
 :root {
-    --rosa-claro: #FDCBCB;
-    --rosa: #E0A2A2;
-    --branco: #E6E6E6;
-    --marrom: #925C5C;
-    --marrom-escuro: #876060;
-    --vermelho: #A72727;
-    --verde: #3FA555;
-
     --josefin-sans: 'Josefin Sans', sans-serif;
     --paytone-one: 'Paytone One', sans-serif;
     --readex-pro: 'Readex Pro', sans-serif;
+}
+
+[data-theme="light"] {
+    --card-color: #E0A2A2;
+    --tittle-color: #925C5C;
+    --text-color: #876060;
+    --input-color: #E6E6E6;
+    --input-text-color: #876060;
+
+    --bg-color: #FDCBCB;
+    --btn-color: #925C5C;
+    --btn-hover-color: #876060;
+    --btn-text-color: #E6E6E6;
+
+    --btn-icon-theme: #000;
+    --btn-hover-icon: #ffffffcd;
+
+    --red: #A72727;
+    --green: #3FA555;
+    --white: #F6F6F6;
+}
+
+[data-theme="dark"] {
+    --card-color: #734848;
+    --tittle-color: #E6E6E6;
+    --text-color: #e0dbdb;
+    --input-color: #e0dbdb;
+    --input-text-color: #323232c4;
+
+    --bg-color: #5a2a2d;
+    --btn-color: #34181a;
+    --btn-hover-color: #492d2f;
+    --btn-text-color: #E6E6E6;
+
+    --btn-icon-theme: #fff;
+    --btn-hover-icon: #4f4e4e8b;
+
+    --red: #711b1b;
+    --green: #347642;
+    --white: #F6F6F6;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 120px 0 0;
+}
+
+.btn-theme {
+    border: none;
+    background: var(--btn-hover-icon);
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--btn-icon-theme);
+    font-size: 40px !important;
+    padding: 2px;
+    width: 50px;
+    height: 50px;
 }
 
 * {
@@ -21,12 +71,12 @@
 }
 
 body {
-    background-color: var(--rosa-claro);
+    background-color: var(--bg-color);
 }
 
 .container {
     font-family: var(--readex-pro);
-    color: var(--marrom-escuro);
+    color: var(--text-color);
 }
 
 .logo {
@@ -52,12 +102,12 @@ body {
 }
 
 form > h1 {
-    color: var(--marrom-escuro);
+    color: var(--tittle-color);
     font-size: 38px;
 }
 
 form > p {
-    color: var(--marrom-escuro);
+    color: var(--text-color);
     font-size: 24px;
 }
 
@@ -84,22 +134,22 @@ form {
     border-radius: 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-family: var(--josefin-sans);
-    color: var(--marrom-escuro);
-    background-color: var(--rosa);
+    color: var(--text-color);
+    background-color: var(--card-color);
     width: 700px;
     height: 440px;
     gap: 38px;
 }
 
 input {
-    background-color: var(--branco);
+    background-color: var(--input-color);
     border-style: none;
     border-radius: 50px;
     width: 80%;
     height: 42px;
     font-family: var(--josefin-sans);
     font-size: 22px;
-    color: var(--marrom-escuro);
+    color: var(--input-text-color);
     padding-left:20px;
 }
 
@@ -107,19 +157,19 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--marrom);
+    background-color: var(--btn-color);
     border-radius: 50px;
     border-style: none;
     font-family: var(--josefin-sans);
     font-size: 24px;
-    color: var(--branco);
+    color: var(--btn-text-color);
     width: 230px;
     height: 42px;
     cursor: pointer;
 }
 
 #button-add:hover {
-    background-color: var(--marrom-escuro);
+    background-color: var(--btn-hover-color);
 }
 
 .buttons-modify {
@@ -130,9 +180,9 @@ input {
 }
 
 #button-somar {
-    background-color: var(--verde);
-    color: var(--branco);
-    font-size: 50px;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 30px;
     font-weight: 800;
     width: 42px;
     height: 42px;
@@ -140,12 +190,14 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 #button-subtrair {
-    background-color: var(--vermelho);
-    color: var(--branco);
-    font-size: 50px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 30px;
     font-weight: 800;
     width: 42px;
     height: 42px;
@@ -153,6 +205,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 @media (max-width: 840px) {
